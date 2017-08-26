@@ -1243,10 +1243,9 @@ class Zappa(object):
             "application/json": "Empty"
         }
         response_headers = {
-            "Access-Control-Allow-Headers": "'%s'" % ",".join(config.get(
-                "allowed_headers", ["Content-Type", "X-Amz-Date",
+            "Access-Control-Allow-Headers": "'%s'" % ",".join(["Content-Type", "X-Amz-Date",
                                     "Authorization", "X-Api-Key",
-                                    "X-Amz-Security-Token", "X-Requested-With"])),
+                                    "X-Amz-Security-Token", "X-Requested-With"]),
             "Access-Control-Allow-Methods": "'%s'" % ",".join(config.get(
                 "allowed_methods", ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"])),
             "Access-Control-Allow-Origin": "'%s'" % config.get(
